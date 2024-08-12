@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Hut</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Burger Hut Logo">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Experience the Juiciest Burgers in Town!</h1>
+            <p>Handcrafted with the freshest ingredients.</p>
+            <a href="#menu" class="btn hero-btn">View Menu</a>
+
+        </div>
+    </section>
+
+
+    <section id="about" class="about-us">
+        <div class="container1">
+            <h2>About Us</h2>
+            <p>Welcome to Burger Hut, your destination for the juiciest burgers in town! Our story began in a modest
+                kitchen with a grand vision: to craft the finest burgers made with the freshest ingredients. From the
+                very start, our commitment has been to deliver an unforgettable burger experience. Each burger is
+                meticulously handcrafted, combining premium, locally-sourced ingredients to achieve a taste that's both
+                rich and satisfying.
+                At Burger Hut, we believe that a great burger begins with quality. That's why we use only the freshest
+                produce, tender, high-quality meats, and unique seasonings to create our signature flavors. Our chefs
+                are passionate about perfecting each recipe, ensuring that every burger is cooked to perfection and
+                bursting with flavor.
+                Whether you're a fan of classic cheeseburgers, gourmet creations, or specialty options, you'll find
+                something to love on our menu. We take pride in our attention to detail, from the first bite to the
+                last, making sure that every visit to Burger Hut is a memorable one. Come and experience burger bliss at
+                its finest—where every burger is a masterpiece of taste and quality.</p>
+            <h3>Burger Hut Restaurant</h3>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-highlights">
+        <h2>Menu Highlights</h2>
+        <div class="menu-categories">
+            <button class="tablink" onclick="openCategory(event, 'Burgers')">Burgers</button>
+            <button class="tablink" onclick="openCategory(event, 'Sides')">Sides</button>
+            <button class="tablink" onclick="openCategory(event, 'Drinks')">Drinks</button>
+            <button class="tablink" onclick="openCategory(event, 'Desserts')">Desserts</button>
+        </div>
+        <div id="Burgers" class="tabcontent">
+            <div class="menu-item slide-left">
+                <img src="Menu Highlights/burger1.jpg" alt="Classic Burger">
+                <h3>Classic Burger</h3>
+                <p>Our signature burger with fresh lettuce, tomato, and a special sauce.</p>
+                <p class="price">$8.99</p>
+                <button class="add-to-cart" onclick="addToCart('Classic Burger', 8.99)">Add to Cart</button>
+            </div>
+            <div class="menu-item slide-right">
+                <img src="Menu Highlights/burger2.jpg" alt="Cheese Burger">
+                <h3>Cheese Burger</h3>
+                <p>Juicy beef patty with melted cheese, pickles, and our secret sauce.</p>
+                <p class="price">$9.99</p>
+                <button class="add-to-cart" onclick="addToCart('Cheese Burger', 9.99)">Add to Cart</button>
+            </div>
+        </div>
+        <div id="Sides" class="tabcontent">
+            <div class="menu-item slide-left">
+                <img src="Menu Highlights/fries.jpg" alt="French Fries">
+                <h3>French Fries</h3>
+                <p>Golden and crispy fries served with ketchup.</p>
+                <p class="price">$3.99</p>
+                <button class="add-to-cart" onclick="addToCart('French Fries', 3.99)">Add to Cart</button>
+            </div>
+            <div class="menu-item slide-right">
+                <img src="Menu Highlights/wings.jpg" alt="Chicken Wings">
+                <h3>Chicken Wings</h3>
+                <p>Spicy chicken wings served with a side of ranch.</p>
+                <p class="price">$6.99</p>
+                <button class="add-to-cart" onclick="addToCart('Chicken Wings', 6.99)">Add to Cart</button>
+            </div>
+        </div>
+        <div id="Drinks" class="tabcontent">
+            <div class="menu-item slide-left">
+                <img src="Menu Highlights/cola.jpg" alt="Cola">
+                <h3>Cola</h3>
+                <p>Refreshing cola to complement your meal.</p>
+                <p class="price">$1.99</p>
+                <button class="add-to-cart" onclick="addToCart('Cola', 1.99)">Add to Cart</button>
+            </div>
+            <div class="menu-item slide-right">
+                <img src="Menu Highlights/milkshake.jpg" alt="Milkshake">
+                <h3>Milkshake</h3>
+                <p>Creamy milkshake in various flavors.</p>
+                <p class="price">$4.99</p>
+                <button class="add-to-cart" onclick="addToCart('Milkshake', 4.99)">Add to Cart</button>
+            </div>
+        </div>
+        <div id="Desserts" class="tabcontent">
+            <div class="menu-item slide-left">
+                <img src="Menu Highlights/icecream.jpg" alt="Ice Cream">
+                <h3>Ice Cream</h3>
+                <p>Delicious ice cream to end your meal on a sweet note.</p>
+                <p class="price">$2.99</p>
+                <button class="add-to-cart" onclick="addToCart('Ice Cream', 2.99)">Add to Cart</button>
+            </div>
+            <div class="menu-item slide-right">
+                <img src="Menu Highlights/cake.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and moist chocolate cake.</p>
+                <p class="price">$4.99</p>
+                <button class="add-to-cart" onclick="addToCart('Chocolate Cake', 4.99)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="order-now">
+            <button onclick="orderNow()">Order Now</button>
+        </div>
+    </section>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <section class="special-offers">
+        <h2>Special Offers & Promotions</h2>
+        <div class="offer-container">
+            <div class="offer-card">
+                <img src="Special Offers & Promotions/burger-special-1.jpg" alt="Burger Deal 1">
+                <div class="offer-info">
+                    <h3>Buy 1 Get 1 Free!</h3>
+                    <p>Get a double cheeseburger with fries and a drink for just $9.99!</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Burger Deal 1', 9.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <img src="Special Offers & Promotions/FF-special-2.jpg" alt="Burger Deal 2">
+                <div class="offer-info">
+                    <h3>Buy 1 Get 1 Free!</h3>
+                    <p>Enjoy a family pack of 4 burgers, 4 fries, and 4 drinks for only $29.99!</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Burger Deal 2', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <img src="Special Offers & Promotions/Ice-special-3.jpg" alt="Burger Deal 3">
+                <div class="offer-info">
+                    <h3>Buy 1 Get 1 Free!</h3>
+                    <p>Enjoy a family pack of 4 burgers, 4 fries, and 4 drinks for only $29.99!</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Burger Deal 3', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="order-now">
+            <button onclick="orderNow()">Order Now</button>
+        </div>
+    </section>
+    <!-- Bill Popup -->
+    <div id="bill-popup" class="bill-popup" style="display: none;">
+        <div class="bill-popup-content">
+            <span class="bill-popup-close" onclick="closeBillPopup()">&times;</span>
+            <h2>Burger Hut Restaurant</h2> <!-- Restaurant name added -->
+            <p>Bill Number: <span id="bill-number">12345</span></p> <!-- Bill number -->
+            <p>GST Number: <span id="gst-number">GST1234567890</span></p> <!-- GST number -->
+            <h3>Bill Summary</h3>
+            <ul id="bill-items"></ul>
+            <p id="total-amount"></p>
+            <button class="order-button" onclick="confirmOrder()">Confirm Order</button> <!-- Attractive button -->
+        </div>
+    </div>
+
+
+    <section id="reviews" class="customer-reviews">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <img src="Customer Reviews/customer1.jpg" alt="Customer 1" class="review-img">
+                <div class="review-info">
+                    <p class="review-text">"The best burgers I'’'ve ever had! Great atmosphere and friendly staff."</p>
+                    <p class="review-author">- John Doe</p>
+                    <div class="star-rating">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9734;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="Customer Reviews/customer2.jpg" alt="Customer 2" class="review-img">
+                <div class="review-info">
+                    <p class="review-text">"Fantastic flavors and unbeatable prices. I keep coming back!"</p>
+                    <p class="review-author">- Jane Smith</p>
+                    <div class="star-rating">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ratings">
+            <h3>Ratings from Popular Platforms</h3>
+            <div class="rating-item">
+                <h4>Google Reviews</h4>
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                </div>
+                <p>4.2 / 5.0</p>
+            </div>
+            <div class="rating-item">
+                <h4>Yelp</h4>
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>5.0 / 5.0</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-form">
+        <div class="container1">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="chat-assistant-button" onclick="toggleChatBox()">💬</div>
+
+    <!-- Chat Assistant Button -->
+    <div class="chat-assistant-button" onclick="toggleChatBox()">💬</div>
+
+    <!-- Chat Box -->
+    <div class="chat-box" id="chat-box">
+        <div class="chat-header">
+            <h3>Chat Assistant</h3>
+            <button onclick="toggleChatBox()">✖️</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot-message">Hi! How can I help you today?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Private Policy and terms/privacy-policy.txt">Privacy Policy</a></li>
+                    <li><a href="Private Policy and terms/terms of service.txt">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h4>Contact Information</h4>
+                <p>Email: <a href="mailto:info@burgerhut.com">info@burgerhut.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p>Address: Downtown, 123 Main Street</p>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Follow Us</h4>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Burger Hut. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
